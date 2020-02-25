@@ -19,7 +19,8 @@ body {
     overflow-x: hidden;
 }
 
-a, a:visited {
+a,
+a:visited {
     color: unset;
     text-decoration: none;
 }
@@ -31,20 +32,23 @@ header {
     justify-content: space-between;
     width: 100vw;
     background: rgb(32, 32, 32);
-    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
 header .logo {
     padding: .5em 2em;
     /* display: flex;
     align-items: center; */
 }
-header .logo img{
+
+header .logo img {
     height: 50px;
     background: #fff;
     border-radius: 50%;
 }
+
 header .logo span {
     color: #fff;
     font-weight: 800;
@@ -52,13 +56,16 @@ header .logo span {
     display: flex;
     align-items: center;
 }
+
 header .logo #pdz-large {
     display: none;
 }
+
 nav {
     display: flex;
     align-items: center;
 }
+
 nav ul {
     position: absolute;
     top: 0;
@@ -78,6 +85,7 @@ nav ul {
     transition-timing-function: cubic-bezier(1, 0, 0, 1);
     overflow-x: hidden;
 }
+
 nav ul li {
     display: flex;
     align-items: center;
@@ -97,6 +105,21 @@ nav ul li:hover {
     cursor: pointer;
 }
 
+nav .lang select {
+    background: rgb(32, 32, 32);
+    border: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav .lang select::content {
+    border: none;
+}
+
+nav .lang select:focus {
+    outline: none;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -107,7 +130,7 @@ footer {
     color: #fff;
 }
 
-footer > * {
+footer>* {
     padding: .5em 0;
     font-size: 1.2em;
     line-height: 1.5em;
@@ -128,6 +151,7 @@ footer .org .org-logo {
     height: 3em;
     object-fit: scale-down;
 }
+
 footer .org span {
     margin-left: 1em;
     font-weight: 700;
@@ -146,12 +170,15 @@ footer .contact a {
 .facebook:hover {
     color: #3b5998;
 }
+
 .youtube:hover {
     color: #ff0000;
 }
+
 .twitter:hover {
     color: #55acee;
 }
+
 .instagram:hover {
     /* color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     background-clip: text;
@@ -175,31 +202,44 @@ footer .contact a {
     background-color: transparent;
     border: 0;
     margin: 0;
-    overflow: visible; }
+    overflow: visible;
+}
+
 .hamburger:focus {
-    outline: none;}
+    outline: none;
+}
+
 .hamburger:hover {
-    opacity: 0.7; }
+    opacity: 0.7;
+}
+
 .hamburger.is-active:hover {
-    opacity: 0.7; }
+    opacity: 0.7;
+}
+
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-    background-color: #fff; }
-  
-  .hamburger-box {
+    background-color: #fff;
+}
+
+.hamburger-box {
     width: 40px;
     height: 24px;
     display: inline-block;
-    position: relative; }
-  
-  .hamburger-inner {
+    position: relative;
+}
+
+.hamburger-inner {
     display: block;
     top: 50%;
     margin-top: -2px;
     overflow-x: unset;
- }
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
     width: 40px;
     height: 4px;
     background-color: #fff;
@@ -207,32 +247,50 @@ footer .contact a {
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
-    transition-timing-function: ease; }
-.hamburger-inner::before, .hamburger-inner::after {
-    content: "";
-    display: block; }
-.hamburger-inner::before {
-    top: -10px; }
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
 .hamburger-inner::after {
-    bottom: -10px; }
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    bottom: -10px;
+}
 
 .hamburger--slider .hamburger-inner {
-    top: 2px; }
+    top: 2px;
+}
+
 .hamburger--slider .hamburger-inner::before {
     top: 10px;
     transition-property: transform, opacity;
     transition-timing-function: ease;
-    transition-duration: 0.15s; }
+    transition-duration: 0.15s;
+}
+
 .hamburger--slider .hamburger-inner::after {
-    top: 20px; }
+    top: 20px;
+}
 
 .hamburger--slider.is-active .hamburger-inner {
-    transform: translate3d(0, 10px, 0) rotate(45deg); }
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
 .hamburger--slider.is-active .hamburger-inner::before {
     transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
-    opacity: 0; }
+    opacity: 0;
+}
+
 .hamburger--slider.is-active .hamburger-inner::after {
-    transform: translate3d(0, -20px, 0) rotate(-90deg); }
+    transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -269,37 +327,51 @@ footer .contact a {
 
 @media only screen and (min-width: 1042px) {
     nav .lang {
-        color: #fff;
         position: absolute;
         right: 1em;
-    }
-    nav .lang a {
-        color: rgba(102, 125, 228, 0.863);
-    }
-    nav .lang a:hover {
-        text-decoration: underline;
     }
 
     footer {
         flex-flow: row wrap;
         justify-content: center;
     }
-    footer .org { flex: 1 100%; justify-content: center; }
-    footer .links, footer .donate, footer .contact {
+
+    footer .org {
+        flex: 1 100%;
+        justify-content: center;
+    }
+
+    footer .links,
+    footer .donate,
+    footer .contact {
         flex: 1;
         max-width: max-content;
         padding: 2em;
     }
-    footer h3 { text-align: center; }
-    footer .links { text-align: right; }
-    footer .donate p { text-align: justify; }
+
+    footer h3 {
+        text-align: center;
+    }
+
+    footer .links {
+        text-align: right;
+    }
+
+    footer .donate p {
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 1337px) {
-    header .logo #pdz-short { display: none; }
+    header .logo #pdz-short {
+        display: none;
+    }
+
     header .logo #pdz-large {
         display: block;
     }
 
-    footer .donate p { padding: 0 20%; }
+    footer .donate p {
+        padding: 0 20%;
+    }
 }

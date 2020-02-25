@@ -15,14 +15,12 @@
     <header>
         <div class="logo">
             <!-- <img src="./img/logo.png" alt="logo"> -->
-            <span id="pdz-large">ПРИЈАТЕЉИ ДЕЦЕ ЗЕМУНА</span>
-            <span id="pdz-short">ПДЗ</span>
+            <span data-mlr-text id="pdz-large">ПРИЈАТЕЉИ ДЕЦЕ ЗЕМУНА</span>
+            <span data-mlr-text id="pdz-short">ПДЗ</span>
         </div>
         <nav>
             <div class="lang">
-                <a href="#lt" data-reload>LAT</a>
-                &nbsp;|&nbsp;
-                <a href="#cr" data-reload>ЋИР</a>
+                <select name="language" class="mb-POCControls_Selector" id="mbPOCControlsLangDrop"></select>
             </div>
             <ul>
                 <li>О Нама</li>
@@ -37,18 +35,14 @@
             </button>
         </nav>
     </header>
-
     <div class="#root">
         <!-- <img src="./img/banner.jpg" alt="banner"> -->
     </div>
-
     <footer>
         <div class="org">
             <img src="./img/logo-white.png" alt="org.logo" class="org-logo">
             <span>Пријатељи Деце Земуна</span>
         </div>
-
-
         <div class="links">
             <h3>Пратите нас</h3>
             <a target=”_blank” href="https://www.facebook.com/Prijatelji-dece-Zemuna-2017620481864147/"
@@ -66,35 +60,22 @@
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
-
         <div class="donate">
             <h3>Помозите нам</h3>
             <p>Донације можете уплатити на наш текући рачун код Војвођанске банке, </br>355-1003913-45</p>
         </div>
-
         <div class="contact">
             <h3>Контакт</h3>
             <a href="https://goo.gl/maps/PnRnhTEUT4gYo7np6" class="addr">
-                <i class="fas fa-map-marker-alt"></i>
-                &nbsp;
-                Цара Душана 57, Земун
-            </a>
+                <i class="fas fa-map-marker-alt"></i> &nbsp; Цара Душана 57, Земун </a>
             <a href="mailto:pdz.marina@gmail.com" class="addr">
-                <i class="fas fa-at"></i>
-                &nbsp;
-                pdz.marina@gmail.com
-            </a>
+                <i class="fas fa-at"></i> &nbsp; pdz.marina@gmail.com </a>
             <a href="tel:011-33-43-135" class="addr">
-                <i class="fas fa-phone"></i>
-                &nbsp;
-                011/33-43-135
-            </a>
+                <i class="fas fa-phone"></i> &nbsp; 011/33-43-135 </a>
         </div>
     </footer>
-
     <script type="text/javascript" src="./script/lang.js"></script>
-    <script type="module">
-        import { render } from './main.js'
+    <script type="module"> import { render } from './main.js'
         render();
     </script>
 </body>
