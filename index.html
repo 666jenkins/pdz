@@ -14,15 +14,21 @@
 <body>
     <header>
         <div class="logo">
-            <img src="./img/logo.png" alt="logo">
-            <!-- <span>Prijatelji Dece Zemuna</span> -->
+            <!-- <img src="./img/logo.png" alt="logo"> -->
+            <span id="pdz-large">ПРИЈАТЕЉИ ДЕЦЕ ЗЕМУНА</span>
+            <span id="pdz-short">ПДЗ</span>
         </div>
         <nav>
+            <div class="lang">
+                <a href="#lt" data-reload>LAT</a>
+                &nbsp;|&nbsp;
+                <a href="#cr" data-reload>ЋИР</a>
+            </div>
             <ul>
-                <li>O Nama</li>
-                <li>Dečja Nedelja</li>
-                <li>Publikacije</li>
-                <li>Blog</li>
+                <li>О Нама</li>
+                <li>Дечја Недеља</li>
+                <li>Публикације</li>
+                <li>Блог</li>
             </ul>
             <button class="hamburger hamburger--slider" type="button">
                 <span class="hamburger-box">
@@ -39,37 +45,39 @@
     <footer>
         <div class="org">
             <img src="./img/logo-white.png" alt="org.logo" class="org-logo">
-            <span>Prijatelji dece Zemuna</span>
+            <span>Пријатељи Деце Земуна</span>
         </div>
 
 
         <div class="links">
-            <h3>Pratite nas</h3>
-            <a href="https://www.facebook.com/Prijatelji-dece-Zemuna-2017620481864147/" class="footer-link facebook">
+            <h3>Пратите нас</h3>
+            <a target=”_blank” href="https://www.facebook.com/Prijatelji-dece-Zemuna-2017620481864147/"
+                class="footer-link facebook">
                 <i class="fab fa-facebook-square"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCxlb6O0EOlsZh2jIfsXaRMg" class="footer-link youtube">
+            <a target=”_blank” href="https://www.youtube.com/channel/UCxlb6O0EOlsZh2jIfsXaRMg"
+                class="footer-link youtube">
                 <i class="fab fa-youtube-square"></i>
             </a>
-            <a href="https://twitter.com/Prijateljidece" class="footer-link twitter">
+            <a target=”_blank” href="https://twitter.com/Prijateljidece" class="footer-link twitter">
                 <i class="fab fa-twitter-square"></i>
             </a>
-            <a href="https://www.instagram.com/prijateljidecesrbije/" class="footer-link instagram">
+            <a target=”_blank” href="https://www.instagram.com/prijateljidecesrbije/" class="footer-link instagram">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
 
         <div class="donate">
-            <h3>Pomozite nam</h3>
-            <p>Donacije možete uplatiti na naš tekući račun kod Vojvođanske banke, </br>355-1003913-45</p>
+            <h3>Помозите нам</h3>
+            <p>Донације можете уплатити на наш текући рачун код Војвођанске банке, </br>355-1003913-45</p>
         </div>
 
         <div class="contact">
-            <h3>Kontakt</h3>
+            <h3>Контакт</h3>
             <a href="https://goo.gl/maps/PnRnhTEUT4gYo7np6" class="addr">
                 <i class="fas fa-map-marker-alt"></i>
                 &nbsp;
-                Cara Dušana 57, Zemun
+                Цара Душана 57, Земун
             </a>
             <a href="mailto:pdz.marina@gmail.com" class="addr">
                 <i class="fas fa-at"></i>
@@ -84,6 +92,7 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="./script/lang.js"></script>
     <script type="module">
         import { render } from './main.js'
         render();

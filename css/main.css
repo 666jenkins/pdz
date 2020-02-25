@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic-ext,latin-ext');
 
 * {
     margin: 0;
@@ -45,6 +45,16 @@ header .logo img{
     background: #fff;
     border-radius: 50%;
 }
+header .logo span {
+    color: #fff;
+    font-weight: 800;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header .logo #pdz-large {
+    display: none;
+}
 nav {
     display: flex;
     align-items: center;
@@ -88,21 +98,24 @@ nav ul li:hover {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
     align-self: flex-end;
     background: rgb(32, 32, 32);
     width: 100vw;
     padding: 2em;
     color: #fff;
-    display: flex;
-    flex-direction: column;
 }
 
 footer > * {
     padding: .5em 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
 }
 
 footer h3 {
-    font-size: 1.4em;
+    font-size: 1.5em;
+    padding-bottom: .5em;
     color: gray;
 }
 
@@ -140,10 +153,11 @@ footer .contact a {
     color: #55acee;
 }
 .instagram:hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    /* color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text; */
+    color: #B230AF;
 }
 
 /* hamburger */
@@ -243,11 +257,49 @@ footer .contact a {
         height: 100%;
         right: unset;
         opacity: 100%;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1em;
     }
 
     .hamburger {
         display: none;
     }
+
+}
+
+@media only screen and (min-width: 1042px) {
+    nav .lang {
+        color: #fff;
+        position: absolute;
+        right: 1em;
+    }
+    nav .lang a {
+        color: rgba(102, 125, 228, 0.863);
+    }
+    nav .lang a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    footer .org { flex: 1 100%; justify-content: center; }
+    footer .links, footer .donate, footer .contact {
+        flex: 1;
+        max-width: max-content;
+        padding: 2em;
+    }
+    footer h3 { text-align: center; }
+    footer .links { text-align: right; }
+    footer .donate p { text-align: justify; }
+}
+
+@media only screen and (min-width: 1337px) {
+    header .logo #pdz-short { display: none; }
+    header .logo #pdz-large {
+        display: block;
+    }
+
+    footer .donate p { padding: 0 20%; }
 }
